@@ -5,7 +5,7 @@ export default function Services() {
 
     function importAll(r) {
         let images = {};
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+        r.keys().map((item, index) => {return images[item.replace('./', '')] = r(item); });
         return images;
     
     }
@@ -22,7 +22,7 @@ export default function Services() {
             <div className="wrapper">
 
                 {imageArray.map((img, idx) => 
-                    <div key={idx} className="pin"><img src={images[img]}></img></div>
+                    <div key={idx} className="pin"><img src={images[img]} alt={img}></img></div>
                 )}
 
             </div>
