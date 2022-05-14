@@ -1,0 +1,354 @@
+// Variables
+$greyColor: rgba(43, 43, 43, 1);
+$greyColor-70: rgba(43, 43, 43, 0.7);
+$greyColor-60: rgba(43, 43, 43, 0.6);
+$greyColor-50: rgba(43, 43, 43, 0.5);
+$greyColor-40: rgba(43, 43, 43, 0.4);
+$greyColor-30: rgba(43, 43, 43, 0.3);
+$greyColor-20: rgba(43, 43, 43, 0.2);
+$greyColor-10: rgba(43, 43, 43, 0.1);
+$yellowColor: #fdb601;
+$yellowGradient: linear-gradient(180deg, rgba(253,182,1,1) 0%, rgba(255,208,86,1) 100%);
+$boxShadow-light: 0 .125rem .25rem rgba(0,0,0,0.1);
+$boxShadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+
+// Animations
+@keyframes nav-enter {
+    0%   {transform: translateY(-100%);}
+    100%   {transform: translateY(0);}
+}
+
+// Fonts
+@font-face {
+    font-family: Epilogue;
+    src: "../Fonts/Epilogue-VariableFont_wght.ttf";
+}
+h1 {
+    font-family: Epilogue, sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+p {
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+// Styles
+@mixin buttonStyle {
+    background: $yellowGradient;
+    border: 5px solid white;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+}
+@mixin anchorStyle {
+    text-decoration: none;
+    font-family: Epilogue, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+}
+@mixin textGradient {
+    background: $yellowGradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// Global
+body {
+    margin: 0;
+    
+    color: $greyColor;
+}
+.parent {
+    font-family: Epilogue, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+.side-pad {
+    padding: 0 15%;
+    transition: all 0.5s;
+}
+.pin {
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+    margin: 1em 1em;
+    width: 4em;
+    height: 4em;
+    border-radius: 100%;
+    top: 0;
+    transition: all 0.2s ease;
+    box-shadow: $boxShadow-light;
+}
+.section-heading {
+    display: flex;
+    align-items: center;
+ 
+    i {
+        font-size: 2rem;
+        margin-top: 1rem;
+        color: $yellowColor;
+    }
+    
+}
+.skew {
+    
+    position: absolute;
+    width: 110%;
+    height: 160px;
+    background-color: white;
+    left: 0;
+    bottom: -50px;
+    transform: rotate(-2deg);
+    transition: all 0.5s;
+} 
+.socials i {
+    padding: 0.75rem;
+    margin-right: 0.5rem;
+    border-radius: 100%;
+    box-shadow: $boxShadow;
+    color: white;
+}
+.socials i:nth-child(1) {
+    background-color: #222;
+}
+.socials i:nth-child(2) {
+    color: #f5c518;
+    background-color: white;
+}
+.socials i:nth-child(3) {
+    background-color: #e4405f;
+}
+.socials i:nth-child(4) {
+    background-color: #1da1f2;
+}
+.socials i:nth-child(5) {
+    background-color: #1881c2;
+}
+
+// HOME
+#home {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    background: $yellowGradient;
+    color: white;
+    
+    div {
+        margin: auto;
+        padding: 0;
+    }
+
+    .name {
+        color: $greyColor;
+        margin: 0;
+    }
+
+    p {
+        text-align: justify;
+        opacity: 0.8;
+        margin: 1.5rem 0 2rem;
+    }
+
+    .lottie {
+        mix-blend-mode: luminosity;
+    }
+
+}  
+
+
+
+// SERVICES
+#services {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    margin-top: 2rem;
+
+    h1 span {
+        @include textGradient();
+    }
+    
+    .overview {
+        padding: 0 25%;
+    }
+    
+    img {
+        margin-top: 1rem;
+        width: 2rem;
+        
+    }
+        
+}
+
+
+// SHOWREEL
+#showreel {
+    margin-top: 6rem;
+
+    .reel {
+        margin: 2rem auto;
+        width: 60vw;
+        height: calc(9/16 * 60vw);
+        border-radius: 10px;
+        background: $yellowGradient;
+        box-shadow: $boxShadow;
+    }
+    iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        background-color: black;
+        border: none;
+    }
+    
+    
+}
+
+
+// Productions 
+#productions {
+    margin-top: 6rem;
+
+    .wrapper {
+        position: relative;
+        text-align: center;
+    }
+
+    img {
+        width: 200px;
+        margin: 1rem;
+        border-radius: 5px;
+        box-shadow: $boxShadow;
+    }
+
+
+}
+
+// Projects
+#projects {
+    position: relative;
+    background: $yellowGradient;
+    margin-top: 6rem;
+
+    .proj-wrapper {
+        position: relative;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .card {
+
+        border: none;
+        min-height: 250px;
+        border-radius: 5px;
+        box-shadow: $boxShadow;
+        margin: 2rem 0;
+
+        .badge {
+            margin-right: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin: 1rem 0 ;
+            line-height: 1;
+            @include textGradient();
+        }
+        .card-text {
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            min-height: 75px;
+        }
+
+        .card-link {
+            background-color: #222;
+            padding: 0.5rem;
+            border-radius: 5px;
+            bottom: 0;
+
+            i {
+                color: white;  
+
+            }
+
+        }
+    }
+
+    .python {
+        background-color: #3773a5;
+    }
+    .html {
+        background-color: #e34e27;
+    }
+    .css {
+        background-color: #28a9df;
+    }
+    .js {
+        background-color: #e4a127;
+    }
+    .motoko {
+        background-color: #47398c;
+    }
+    .game {
+        background-color: #01d902;
+    }
+
+    
+}
+
+
+// About 
+#about {
+    position: relative;
+    margin-top: 6rem;
+    text-align: center;
+    padding: 0 25%;
+
+    span {
+        @include textGradient();
+    }
+
+}
+
+
+// Footer
+#footer {
+    margin-top: 6rem;
+    background: $yellowGradient;
+    // color: white;
+
+    .row {
+        width: 100%;
+    }
+    
+    p {
+        text-align: center;
+        font-size: 0.8rem;
+        opacity: 0.5;
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+
+    .footer-content {
+        padding: 4rem 0 2rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .f-right {
+        text-align: right;
+
+        .badge {
+            background-color: $greyColor;
+            color: $yellowColor;
+            margin: 1.5rem 0 0 0.5rem;
+        }
+    }
+
+    img {
+        height: 85px;
+    }
+}
+    

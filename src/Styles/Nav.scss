@@ -1,0 +1,228 @@
+// Variables
+$greyColor: rgba(43, 43, 43, 1);
+$greyColor-70: rgba(43, 43, 43, 0.7);
+$greyColor-60: rgba(43, 43, 43, 0.6);
+$greyColor-50: rgba(43, 43, 43, 0.5);
+$greyColor-40: rgba(43, 43, 43, 0.4);
+$greyColor-30: rgba(43, 43, 43, 0.3);
+$greyColor-20: rgba(43, 43, 43, 0.2);
+$greyColor-10: rgba(43, 43, 43, 0.1);
+$yellowColor: #fdb601;
+$yellowGradient: linear-gradient(180deg, rgba(253,182,1,1) 0%, rgba(255,208,86,1) 100%);
+
+// NAVIGATION
+
+
+
+// End Navbar 
+
+.nav-active {
+    transform: translateY(0) !important;
+
+}
+.nav {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 20;
+    background-color: white;
+    transform: translateY(-110%);
+    // transition: all 0.8s;
+    
+
+    .nav-content {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-list { 
+        position: relative; 
+        padding: 0;
+    } 
+    .nav-item { 
+        list-style: none; 
+        text-align: center; 
+        
+    } 
+    a { 
+        color: $greyColor; 
+        text-decoration: none; 
+        font-size: 3em; 
+        padding: 2rem 20px; 
+        display: inline-flex; 
+        font-weight: bold; 
+        transition: 0.5s; 
+    } 
+
+
+    ul:hover li a {
+        color: $greyColor-10;
+    }
+    ul li:hover a {
+        color: $greyColor;
+    }
+// End Nav
+}
+
+
+// Navigation
+.navbar {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    width: 100vw;
+    position: fixed;
+    z-index: 30;
+    
+
+    img {
+        height: 30px;
+    }
+
+    i {
+        padding: 0 1rem;
+        transition: all 0.5s ease;
+    }
+
+    // Default State
+    .menu-icon {
+        size: 30px;
+        width: 30px;
+        cursor: pointer;
+
+        .line {
+            height: 2px;
+            display: block;
+            transition: all 0.5s ease; 
+        }
+        .line-middle {
+            margin-bottom: 4px;
+        }
+        .line-left{
+            width: 15px;
+            margin-bottom: 4px;
+        }
+        .line-right{
+            width: 15px;
+            float: right;
+        }
+    }
+
+}
+.menu {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    z-index: 20;
+    transition: transform 0.5s ease-out;
+
+    .menu-content {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ul {
+            position: relative; 
+            list-style: none; 
+            padding: 0;
+            text-align: center;
+            
+            li {
+                padding: 2rem 20px; 
+            }
+
+            a {
+                color: $greyColor;
+                text-decoration: none;
+                font-size: 3em; 
+                
+                font-weight: bold; 
+                transition: all 0.3s ease; 
+            }
+        }
+
+        ul:hover li a {
+            color: $greyColor-10;
+        }
+        ul li:hover a {
+            color: $greyColor;
+        }
+    }
+}
+
+.menu-open {
+
+    .menu {
+        transform: translateY(0);
+    }
+
+    .navbar {
+
+        background-color: white !important;
+        transform: translateY(0%) !important;
+
+        i {
+            color: $greyColor;
+        }
+        
+
+        .line {
+            background-color: $greyColor;
+        }
+        .line-middle{
+            background-color: $greyColor;
+            transform: translateX(0px) rotate(-45deg);
+        }
+        .line-left{
+            background-color: $greyColor;
+            transform: translateX(1px) rotate(45deg);
+        }
+        .line-right{
+            background-color: $greyColor;
+            transform: translateX(-2px) rotate(45deg);
+        }
+    }
+    
+}
+.menu-closed {
+
+    .menu {
+        transform: translateY(100%);
+    }
+    
+    .navbar {
+
+        i {
+            color: white;
+        }
+        
+    
+        .line {
+            background-color: white;
+        }
+
+    }
+
+}
+
+
+// Hide & Show Navbar depending on scroll direction
+.headroom {
+    will-change: transform;
+    transition: transform 0.5s ease;
+}
+.headroom--top {
+    background-color: transparent;
+}
+.headroom--not-top {
+    background: $yellowColor;  
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}

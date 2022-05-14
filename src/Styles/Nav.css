@@ -1,0 +1,233 @@
+.nav-active {
+  -webkit-transform: translateY(0) !important;
+          transform: translateY(0) !important;
+}
+
+.nav {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 20;
+  background-color: white;
+  -webkit-transform: translateY(-110%);
+          transform: translateY(-110%);
+}
+
+.nav .nav-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .nav-list {
+  position: relative;
+  padding: 0;
+}
+
+.nav .nav-item {
+  list-style: none;
+  text-align: center;
+}
+
+.nav a {
+  color: #2b2b2b;
+  text-decoration: none;
+  font-size: 3em;
+  padding: 2rem 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: bold;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav ul:hover li a {
+  color: rgba(43, 43, 43, 0.1);
+}
+
+.nav ul li:hover a {
+  color: #2b2b2b;
+}
+
+.navbar {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  width: 100vw;
+  position: fixed;
+  z-index: 30;
+}
+
+.navbar img {
+  height: 30px;
+}
+
+.navbar i {
+  padding: 0 1rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.navbar .menu-icon {
+  size: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.navbar .menu-icon .line {
+  height: 2px;
+  display: block;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.navbar .menu-icon .line-middle {
+  margin-bottom: 4px;
+}
+
+.navbar .menu-icon .line-left {
+  width: 15px;
+  margin-bottom: 4px;
+}
+
+.navbar .menu-icon .line-right {
+  width: 15px;
+  float: right;
+}
+
+.menu {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  z-index: 20;
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+}
+
+.menu .menu-content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .menu-content ul {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.menu .menu-content ul li {
+  padding: 2rem 20px;
+}
+
+.menu .menu-content ul a {
+  color: #2b2b2b;
+  text-decoration: none;
+  font-size: 3em;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.menu .menu-content ul:hover li a {
+  color: rgba(43, 43, 43, 0.1);
+}
+
+.menu .menu-content ul li:hover a {
+  color: #2b2b2b;
+}
+
+.menu-open .menu {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.menu-open .navbar {
+  background-color: white !important;
+  -webkit-transform: translateY(0%) !important;
+          transform: translateY(0%) !important;
+}
+
+.menu-open .navbar i {
+  color: #2b2b2b;
+}
+
+.menu-open .navbar .line {
+  background-color: #2b2b2b;
+}
+
+.menu-open .navbar .line-middle {
+  background-color: #2b2b2b;
+  -webkit-transform: translateX(0px) rotate(-45deg);
+          transform: translateX(0px) rotate(-45deg);
+}
+
+.menu-open .navbar .line-left {
+  background-color: #2b2b2b;
+  -webkit-transform: translateX(1px) rotate(45deg);
+          transform: translateX(1px) rotate(45deg);
+}
+
+.menu-open .navbar .line-right {
+  background-color: #2b2b2b;
+  -webkit-transform: translateX(-2px) rotate(45deg);
+          transform: translateX(-2px) rotate(45deg);
+}
+
+.menu-closed .menu {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.menu-closed .navbar i {
+  color: white;
+}
+
+.menu-closed .navbar .line {
+  background-color: white;
+}
+
+.headroom {
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.headroom--top {
+  background-color: transparent;
+}
+
+.headroom--not-top {
+  background: #fdb601;
+}
+
+.headroom--pinned {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.headroom--unpinned {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+/*# sourceMappingURL=Nav.css.map */

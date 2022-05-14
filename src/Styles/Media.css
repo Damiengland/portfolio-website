@@ -1,0 +1,64 @@
+@media (max-width: 1201px) {
+  .side-pad {
+    padding: 0 10%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .side-pad {
+    padding: 0 5%;
+  }
+  .pin {
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+  }
+  .section-heading i {
+    font-size: 1rem;
+  }
+  #home {
+    text-align: center;
+    min-height: 80vh;
+  }
+  #home p {
+    text-align: center;
+  }
+  #services .overview {
+    padding: 0;
+  }
+  #services img {
+    margin-top: 0.9rem;
+    width: 1.2rem;
+  }
+  #showreel .reel {
+    width: 90vw;
+    height: calc(9/16 * 90vw);
+  }
+  #productions img {
+    width: 100px;
+    margin: 0.4rem;
+  }
+  #projects .section-heading {
+    padding-top: 1rem;
+  }
+  #projects .card {
+    margin: 1rem 0;
+  }
+  #about {
+    padding: 5%;
+  }
+  #footer {
+    text-align: center;
+  }
+  #footer .footer-content {
+    padding: 2rem;
+  }
+  #footer img {
+    height: 70px;
+    margin-bottom: 2rem;
+  }
+  #footer .f-right {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=Media.css.map */
