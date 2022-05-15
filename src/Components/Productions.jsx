@@ -20,6 +20,17 @@ export default function Productions() {
                 <h1>Productions</h1>
             </div>
 
+            {/* <div className="prod-filter">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn">FEATURED</button>
+                    <button type="button" class="btn">FILM</button>
+                    <button type="button" class="btn">MARVEL</button>
+                    <button type="button" class="btn">TV</button>
+                </div>
+            </div> */}
+
+
+
             <div className="wrapper">
                 {imageNames.map((img, idx) => 
                     <img key={idx} src={images[img]} alt={img}></img>

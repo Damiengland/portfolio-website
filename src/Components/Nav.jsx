@@ -22,10 +22,10 @@ export default function Nav() {
                 <a className="navbar-brand" href="#home"><img src={menuOpen ? DE_grey: DE_bw} alt="Logo"></img></a>
 
                 <div className="socials-nav">
-                    <i className="fa-brands fa-github"></i>
-                    <i className="fa-brands fa-imdb"></i>
-                    <i className="fa-brands fa-instagram"></i>
-                    <i className="fa-brands fa-linkedin-in"></i>
+                    <a href="https://github.com/Damiengland" target="_blank" rel="noreferrer"><i className="fa-brands fa-github"></i></a>
+                    <a href="https://www.imdb.com/name/nm11044479/" target="_blank" rel="noreferrer"><i className="fa-brands fa-imdb"></i></a>
+                    <a href="https://www.instagram.com/damoengland/" target="_blank" rel="noreferrer"><i className="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/damien-england-b67a3a141/" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin-in"></i></a>
                 </div>
 
                 <div className="menu-icon" onClick={(e) => setMenu(!menuOpen)}>
