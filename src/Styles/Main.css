@@ -105,24 +105,24 @@ body {
   color: white;
 }
 
-.socials i:nth-child(1) {
+.socials .fa-github {
   background-color: #222;
 }
 
-.socials i:nth-child(2) {
-  color: #f5c518;
+.socials .fa-imdb {
+  color: #f5c518 !important;
   background-color: white;
 }
 
-.socials i:nth-child(3) {
+.socials .fa-instagram {
   background-color: #e4405f;
 }
 
-.socials i:nth-child(4) {
+.socials .fa-linkedin-in {
   background-color: #1da1f2;
 }
 
-.socials i:nth-child(5) {
+.socials .fa-envelope {
   background-color: #1881c2;
 }
 
@@ -356,4 +356,4 @@ body {
 #footer img {
   height: 85px;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=Main.css.map */

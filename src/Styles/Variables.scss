@@ -1,0 +1,33 @@
+// Variables
+$greyColor: rgba(43, 43, 43, 1);
+$greyColor-70: rgba(43, 43, 43, 0.7);
+$greyColor-60: rgba(43, 43, 43, 0.6);
+$greyColor-50: rgba(43, 43, 43, 0.5);
+$greyColor-40: rgba(43, 43, 43, 0.4);
+$greyColor-30: rgba(43, 43, 43, 0.3);
+$greyColor-20: rgba(43, 43, 43, 0.2);
+$greyColor-10: rgba(43, 43, 43, 0.1);
+$yellowColor: #fdb601;
+$yellowGradient: linear-gradient(180deg, rgba(253,182,1,1) 0%, rgba(255,208,86,1) 100%);
+$boxShadow-light: 0 .125rem .25rem rgba(0,0,0,0.1);
+$boxShadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+
+// Styles
+@mixin buttonStyle {
+    background: $yellowGradient;
+    border: 5px solid white;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+}
+@mixin anchorStyle {
+    text-decoration: none;
+    font-family: Epilogue, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+}
+@mixin textGradient {
+    background: $yellowGradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -1,16 +1,4 @@
-// Variables
-$greyColor: rgba(43, 43, 43, 1);
-$greyColor-70: rgba(43, 43, 43, 0.7);
-$greyColor-60: rgba(43, 43, 43, 0.6);
-$greyColor-50: rgba(43, 43, 43, 0.5);
-$greyColor-40: rgba(43, 43, 43, 0.4);
-$greyColor-30: rgba(43, 43, 43, 0.3);
-$greyColor-20: rgba(43, 43, 43, 0.2);
-$greyColor-10: rgba(43, 43, 43, 0.1);
-$yellowColor: #fdb601;
-$yellowGradient: linear-gradient(180deg, rgba(253,182,1,1) 0%, rgba(255,208,86,1) 100%);
-$boxShadow-light: 0 .125rem .25rem rgba(0,0,0,0.1);
-$boxShadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+@import './Variables.scss';
 
 // Animations
 @keyframes nav-enter {
@@ -31,26 +19,7 @@ h1 {
 p {
     line-height: 1.6;
     margin: 1rem 0;
-}
-
-// Styles
-@mixin buttonStyle {
-    background: $yellowGradient;
-    border: 5px solid white;
-    border-radius: 5px;
-    padding: 1rem 2rem;
-}
-@mixin anchorStyle {
-    text-decoration: none;
-    font-family: Epilogue, sans-serif;
-    font-weight: bold;
-    font-size: 1rem;
-    color: white;
-}
-@mixin textGradient {
-    background: $yellowGradient;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: $yellowColor;
 }
 
 // Global
@@ -103,27 +72,32 @@ body {
     transition: all 0.5s;
 } 
 .socials i {
+    
     padding: 0.75rem;
     margin-right: 0.5rem;
     border-radius: 100%;
     box-shadow: $boxShadow;
     color: white;
 }
-.socials i:nth-child(1) {
-    background-color: #222;
-}
-.socials i:nth-child(2) {
-    color: #f5c518;
-    background-color: white;
-}
-.socials i:nth-child(3) {
-    background-color: #e4405f;
-}
-.socials i:nth-child(4) {
-    background-color: #1da1f2;
-}
-.socials i:nth-child(5) {
-    background-color: #1881c2;
+.socials {
+
+    .fa-github {
+        background-color: #222;
+    }
+    .fa-imdb {
+        color: #f5c518 !important;
+        background-color: white;
+    }
+    .fa-instagram {
+        background-color: #e4405f;
+    }
+    .fa-linkedin-in {
+        background-color: #1da1f2;
+    }
+    .fa-envelope {
+        background-color: #1881c2;
+    }
+
 }
 
 // HOME
@@ -209,6 +183,22 @@ body {
 // Productions 
 #productions {
     margin-top: 6rem;
+
+    // .prod-filter {
+    //     text-align: center;
+    //     .btn-group {
+    //         margin: 1rem 0;
+    //         box-shadow: $boxShadow;
+    //         button {
+    //             background: $yellowGradient;
+    //             border: none;
+    //             color: white;
+    //             opacity: 0.5;
+    //         }
+            
+    //     }
+    // }
+
 
     .wrapper {
         position: relative;
