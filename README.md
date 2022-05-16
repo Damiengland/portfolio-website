@@ -6,7 +6,7 @@ A single page portfolio website built with react, designed to showcase my work a
 
 ### View Website, [Here](http://damienengland.com.au)
 
-### Build Tools
+## Build Tools
 **Design**
 - Adobe Photoshop
 - Adobe Illustrator
@@ -35,9 +35,9 @@ There are a few planned features in the pipeline that will be added to the websi
 ## Author
 🧑🏼‍💻 **Damien England**
 
-Website: https://damienengland.com.au
-Linkedin: [Damien England](https://www.linkedin.com/in/damien-england-b67a3a141/)
-Email: damien.england@icloud.com
+- Website: https://damienengland.com.au
+- Linkedin: [Damien England](https://www.linkedin.com/in/damien-england-b67a3a141/)
+- Email: damien.england@icloud.com
 
 
 
