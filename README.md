@@ -1,6 +1,6 @@
 # Portfolio Website
 
-![[public/Images/website_computer.png]]
+<img src="public/Images/website_computer.png"/>
 
 A single page portfolio website built with react, designed to showcase my work as a Digital Compositor on globally successful Film & TV Series such as Doctor Strange in the Multiverse of Madness, Spider-Man No Way Home, Loki and many more, aswell as my projects as a Developer.
 
